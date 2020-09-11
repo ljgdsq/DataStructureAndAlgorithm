@@ -1,12 +1,44 @@
 package test;
 
-import main.com.zsl.algorithm.sort.Bubble;
+import junit.framework.TestCase;
+import main.com.zsl.algorithm.sort.*;
 import org.junit.Test;
-public class TestSort {
+
+//import static junit.framework.TestCase.assertEquals;
+
+
+public class TestSort extends TestCase {
+
+    private Integer[] arr = new Integer[]{6, 3, 7, 9, 0, 1};
 
     @Test
-    public  void testBubbleSort(){
-       Integer[] arr=new Integer[]{6,3,7,9,0,1};
-       new Bubble().sort(arr);
+    public void testBubbleSort() {
+        new Bubble().sort(arr);
+    }
+
+    @Test
+    public void testSelectSort() {
+        new Select().sort(arr);
+    }
+
+    @Test
+    public void testInsertionSort(){new Insertion().sort(arr);
+
+    }
+
+    @Test
+    public void testSellSort(){new Shell().sort(arr);
+
+    }
+
+
+    @Test
+    public void testMergeSort(){new Merge().sort(arr);
+
+    }
+
+    @Test
+    public void testQuickSort(){new Quick().sort(arr);
+
     }
 }
