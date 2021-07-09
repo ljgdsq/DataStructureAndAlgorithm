@@ -15,4 +15,17 @@ public class RandomTool {
 
         return arr;
     }
+
+
+    public static Integer[] RandomIntegerArray(int count,int bound)
+    {
+        Random random=new Random();
+        Integer arr[]=new Integer[count];
+
+        for (int i=0;i<count;i++)
+        {
+            arr[i]=random.nextInt(bound);
+        }
+        return arr;
+    }
 }
